@@ -1,0 +1,26 @@
+﻿<Window x:Class="wpflearn.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpflearn"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Music Player by Kiet" Height="450" Width="800">
+    <Window.Resources>
+        <x:Array x:Key="AddandDelete" Type="sys:String">
+            <sys:String>Add</sys:String>
+            <sys:String>Delete</sys:String>
+        </x:Array>
+    </Window.Resources>
+    <Viewbox StretchDirection="Both" Stretch="Uniform">
+        <Grid Name = "Kiet">
+            <Grid.Background>
+                <ImageBrush ImageSource="https://i.kym-cdn.com/entries/icons/original/000/026/653/triangle.jpg"/>
+            </Grid.Background>
+            <TextBlock Text="MUSIC" FontSize="50" Foreground="Red" Margin="316,109,316,234" Name="TitleApp"/>
+            <ComboBox x:Name="MusicChoice" HorizontalAlignment="Center" Margin="0,205,0,0" VerticalAlignment="Top" Width="248" Height="44" SelectionChanged="Choice" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <ComboBox HorizontalAlignment="Left" Height="22" Margin="704,0,0,0" VerticalAlignment="Top" Width="72" x:Name="AddDelete" ItemsSource="{DynamicResource AddandDelete}" SelectionChanged="AddorDelete"/>
+        </Grid>
+    </Viewbox>
+</Window>
